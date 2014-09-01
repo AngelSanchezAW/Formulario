@@ -6,57 +6,91 @@
 	<link href='http://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type='text/css' href="fonts/style.css">
 	<style>
+
+        /*Body es el cuerpo del documento--------------------------------------------------------------------------------------------------------------*/
 	    body{
-	    	margin-top: 150px;
-	    	font-family: 'Abel', sans-serif;
-	    	background: url(img/body.png);
+	    	margin: 0;
+	    	font-family: 'Abel', sans-serif; /*Declaramos el tipo de letra para todo el documento, en este caso estamos utilizando Google Fons*/
+	    	background: url(img/body.png); /*Fondo del documento*/
 	    }
+	    /*Body es el cuerpo del documento--------------------------------------------------------------------------------------------------------------*/
+
+        /*DIV que contiene el contenedor y el formulario*-----------------------------------------------------------------------------------------------*/
 		div#loginD{
-			margin: 0 auto;
-			overflow:hidden; 
-			width: 300px;
-			background: url(img/loggin.png) no-repeat #151515;
-			background-position: bottom;
-			color: white;
-			height: 65px;
-			border-radius: 5px;
-			box-shadow: 5px 5px 5px #424242;
-			-webkit-transition: height .5s;
-			-moz-transition: height .5s;
-			-o-transition: height .5s;
-			-ms-transition: height .5s;
-			
+			margin: auto; /*Declaramos un margen automático para lograr centrar el DIV*/
+			margin-top: 150px; /*Este es el margen que existe de la parte de arriba del documento con el DIV, en este caso colocamos 150px de distancia.*/
+			overflow:hidden; /*Esta propiedad oculta todo lo que se salga del DIV*/
+			width: 300px; /*Este es el ancho del DIV*/
+			background: url(img/loggin.png) no-repeat #151515; /*Fondo del DIV, "no-repeat" es para que no se repita el fondo y ponemos "#151515" es el color que tendrá de fondo en las partes donde la imagen no tape*/
+			background-position: bottom; /*Colocamos la imagen de fondo en la parte de abajo "botton"*/
+			color: white; /*Es el color de texto, en este caso utilizamos "white" pero puede ser hexadecimal (#ffffff) u otro*/
+			height: 65px; /*Alto del documento*/
+			border-radius: 5px; /*La propiedad de "border radius" es para lograr bordes redondos, en este caso 5px*/
+			box-shadow: 5px 5px 5px #424242; /*La propiedad "box-shadow" es utilizada para realizar sombras cada 5px representa un lugar, arriba, abajo y distorsión. Aquí te dejo un generador de sombras CSS3 Link: http://www.azulweb.net/generador-de-sombras-css3/*/
+			/*Estas ultimas propiedades son utilizadas para lograr el efecto de transición*/
+			-webkit-transition: height .5s; /*Compatibilidad con Google Chrome y Zafari*/
+			-moz-transition: height .5s; /*Compatibilidad con Mozilla*/
+			-o-transition: height .5s; /*Compatibilidad con Opera*/
+			transition: height .5s; /*Compatibilidad con Explorer*/
+			/*Estas ultimas propiedades son utilizadas para lograr el efecto de transición*/	
 		}
-
-		div#loginD:hover{
-			height: 240px;
-			
-		}
-
+		div#loginD:hover{ /*Este es el mismo DIV pero con la propiedad  "hover" que se activa al pasar el puntero*/
+			height: 270px; /*Originalmente tiene un alto de 65px y al pasar el puntero cambia a 270px y con la transición se logra un bonito cambio*/		}
+		/*DIV que contiene el contenedor y el formulario*-----------------------------------------------------------------------------------------------*/
+        
+        /*Div que contiene el formulario----------------------------------------------------------------------------------------------------------------*/
 		div#loginCONTENEDOR{
-			margin-left: 10px;
-			margin-top: 10px;
-			margin-right: 10px; 
+			padding: 10px; /*Establece la anchura de algunas o todas las zonas de relleno de los elementos*/
 		}
+		/*Div que contiene el formulario----------------------------------------------------------------------------------------------------------------*/
 
+        /*Titulo del documento--------------------------------------------------------------------------------------------------------------------------*/
 		#titulo{
-        font-size: 20px;
+        font-size: 20px;/*Tamaño de letra*/
 		}
-
-
+        /*Titulo del documento--------------------------------------------------------------------------------------------------------------------------*/
+        
+        /*Iconos, en este caso utilizamos esta etiqueta para llamar a los iconos------------------------------------------------------------------------*/
 		span{
-			margin-right: 10px;
-			color: #FE2E2E;
+			margin-right: 10px; /*Margen para el lado derecho*/
+			color: #FE2E2E; /*Color*/
 		}
+		/*Iconos, en este caso utilizamos esta etiqueta para llamar a los iconos------------------------------------------------------------------------*/
 
+        /*Diseño para los input del formulario----------------------------------------------------------------------------------------------------------*/
+		input{
+			width: 275px; /*Ancho*/
+			height: 15px; /*Alto*/
+		}
+		/*Diseño para los input del formulario----------------------------------------------------------------------------------------------------------*/
+ 
+        /*Botón del formulario--------------------------------------------------------------------------------------------------------------------------*/
+		#boton{
+			width: 70px; /*Ancho*/
+			height: 40px; /*Alto*/
+			background:  rgba(0, 0, 0, 0.6); /*Fondo, en esta ocasión utilizamos rgba*/
+			color: #fff; /*Color de texto*/
+			border-style: none; /*Quitamos los estilo del borde*/
+			cursor: pointer; /*Ponemos que al pasar el puntero se coloque pointer (La manita)*/
+			/*La propiedad "box-shadow" es utilizada para realizar sombras cada 5px representa un lugar, arriba, abajo y distorsión. Aquí te dejo un generador de sombras CSS3 Link: http://www.azulweb.net/generador-de-sombras-css3/*/
+			box-shadow:0px 0px 2px 0px #909090;
+			-moz-box-shadow:0px 0px 2px 0px #909090;
+			-webkit-box-shadow:0px 0px 2px 0px #909090;
+			border-radius: 5px; /*La propiedad de "border radius" es para lograr bordes redondos, en este caso 5px*/
+		}
+		/*Botón del formulario--------------------------------------------------------------------------------------------------------------------------*/
+        
+        /*DIV que contiene los créditos-----------------------------------------------------------------------------------------------------------------*/
 		#creditos{
-			margin: 0 auto;
-			width: 300px;
-			background:#151515;
-			color: #ffffff;
-			border-radius: 5px;
+			margin: 0 auto; /*Declaramos un margen automático para lograr centrar el DIV*/
+			width: 300px; /*Ancho*/
+			background:#151515;/*Color de fondo*/
+			color: #ffffff;/*Color de texto*/
+			border-radius: 5px; /*La propiedad de "border radius" es para lograr bordes redondos, en este caso 5px*/
+			/*La propiedad "box-shadow" es utilizada para realizar sombras cada 5px representa un lugar, arriba, abajo y distorsión. Aquí te dejo un generador de sombras CSS3 Link: http://www.azulweb.net/generador-de-sombras-css3/*/
 			box-shadow: 5px 5px 5px #424242;
 		}
+		 /*DIV que contiene los créditos----------------------------------------------------------------------------------------------------------------*/
 	</style>
 </head>	
 <body>
@@ -68,7 +102,7 @@
 		     	<input type="tex" name="Nombre" size="40.5"/><br/><br/>
 		     	<span class="icon-key"></span>Contraseña:<br/>
 		     	<input type="password" name="Nombre" size="40.5"/><br/><br/>
-		     	<input type="button" name="Conectar" value="Conectar"/>
+		     	<input id="boton" type="button" name="Conectar" value="Conectar"/>
 		    </form>
 	    </div>	
 	</div>
